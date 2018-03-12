@@ -1,0 +1,41 @@
+<p>
+  listcompetition works!
+</p>
+
+
+<table style="width:100%">
+  <tr style="color: green ">
+    <th>StartDate</th>
+    <th>Name</th>
+    <th>Sport</th>
+    <th>locationname</th>
+    <th>locationcity</th>
+    <th>locationcountry</th>
+    <th>ownerFirstName</th>
+  </tr>
+   <tr *ngFor="let val of MyData ;let i=index">
+      <th> {{val.Competition.StartDate |  date:'MM/dd/yyyy' }}</th>
+     <th> {{val.Competition.Name}}</th>
+     <th> {{val.Competition.Sport}}</th>
+     <th> {{val.Competition.LocationData[0].Name}}</th>
+     <th> {{val.Competition.LocationData[0].City}}</th>
+     <th> {{val.Competition.LocationData[0].Country === null? 'null': val.Competition.LocationData[0].Country}}</th>
+     <th> {{val.Competition.Owner.FirstName}}</th>
+     <th><a style="cursor: pointer;" (click)="onEditCompetition(val.Competition.CompetitionId)">Edit </a></th>
+     <th><a style="cursor: pointer;" (click)="onDeleteCompetition(val.Competition.CompetitionId)">Delete </a></th>
+   </tr>
+
+</table>
+
+
+<!--<div class="row">-->
+  <!--<div class="col-xs-12">-->
+    <!--<ul class="list-group">-->
+      <!--<li-->
+        <!--class="list-group-item"-->
+        <!--*ngFor="let ingredient of recipe.ingredients">-->
+        <!--{{ ingredient.name }} - {{ ingredient.amount }}-->
+      <!--</li>-->
+    <!--</ul>-->
+  <!--</div>-->
+<!--</div>-->

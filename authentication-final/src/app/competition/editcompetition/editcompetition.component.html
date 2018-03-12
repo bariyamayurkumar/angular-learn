@@ -1,0 +1,101 @@
+
+
+<div class="row">
+  <div class="col-xs-12">
+    <form (ngSubmit)="editCompititions()" #f="ngForm">
+      <div class="row">
+        <div class="col-sm-5 form-group">
+          <label for="cname">Competition Name</label>
+          <input
+            type="text"
+            id="cname"
+            class="form-control"
+            name="cname"
+            ngModel
+            required
+          >
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-sm-5 form-group">
+          <label for="lname">Location Name</label>
+          <input
+            type="text"
+            id="lname"
+            class="form-control"
+            name="lname"
+            ngModel
+            required
+          >
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-5 form-group">
+          <label for="lcity">Location city</label>
+          <input
+            type="text"
+            id="lcity"
+            class="form-control"
+            name="lcity"
+            ngModel
+            required
+          >
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-5 form-group">
+          <label for="lcountry">Location Country</label>
+          <input
+            type="text"
+            id="lcountry"
+            class="form-control"
+            name="lcountry"
+            ngModel
+            required
+          >
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-5 form-group">
+          <label for="sdate">Start Date</label>
+          <input
+            type="datetime"
+            id="sdate"
+            class="form-control"
+            name="sdate"
+            ngModel
+            required
+          >
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-5 form-group">
+          <label for="edate">End Date</label>
+          <input
+            type="datetime"
+            id="edate"
+            class="form-control"
+            name="edate"
+            ngModel
+            required
+          >
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <button
+            class="btn btn-success"
+            type="submit"> Update
+          </button>
+          <!--<button-->
+          <!--class="btn btn-danger"-->
+          <!--type="button"-->
+          <!--(click)="onDelete()"-->
+          <!--*ngIf="editMode">Delete</button>-->
+          <button class="btn btn-primary" type="button" (click)="onClear()">Clear</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
